@@ -60,35 +60,35 @@ RUN
 NAME=ih* (file x86)
 FILE=../bins/elf/analysis/x86-helloworld-gcc
 EXPECT=<<EOF
-fs header
-f header.ELF @ 0x00000000
-CC 0x464c457f @ 0x0
-Cf 4 x @ 0x0
-pf.ELF x
-f header.Type @ 0x00000010
-CC 0x00000002 @ 0x10
-Cf 2 x @ 0x10
-pf.Type x
-f header.Machine @ 0x00000012
-CC 0x00000003 @ 0x12
-Cf 2 x @ 0x12
-pf.Machine x
-f header.Version @ 0x00000014
-CC 0x00000001 @ 0x14
-Cf 4 x @ 0x14
-pf.Version x
-f header.Entry_point @ 0x00000018
-CC 0x08048300 @ 0x18
-Cf 4 x @ 0x18
-pf.Entry_point x
-f header.PhOff @ 0x0000001c
-CC 0x00000034 @ 0x1c
-Cf 4 x @ 0x1c
-pf.PhOff x
-f header.ShOff @ 0x00000020
-CC 0x000007cc @ 0x20
-Cf 4 x @ 0x20
-pf.ShOff x
+"fs header"
+"f header.ELF @ 0x00000000"
+"CC 0x464c457f @ 0x0"
+"Cf 4 x @ 0x0"
+"pf.ELF x"
+"f header.Type @ 0x00000010"
+"CC 0x00000002 @ 0x10"
+"Cf 2 x @ 0x10"
+"pf.Type x"
+"f header.Machine @ 0x00000012"
+"CC 0x00000003 @ 0x12"
+"Cf 2 x @ 0x12"
+"pf.Machine x"
+"f header.Version @ 0x00000014"
+"CC 0x00000001 @ 0x14"
+"Cf 4 x @ 0x14"
+"pf.Version x"
+"f header.Entry_point @ 0x00000018"
+"CC 0x08048300 @ 0x18"
+"Cf 4 x @ 0x18"
+"pf.Entry_point x"
+"f header.PhOff @ 0x0000001c"
+"CC 0x00000034 @ 0x1c"
+"Cf 4 x @ 0x1c"
+"pf.PhOff x"
+"f header.ShOff @ 0x00000020"
+"CC 0x000007cc @ 0x20"
+"Cf 4 x @ 0x20"
+"pf.ShOff x"
 EOF
 CMDS=<<EOF
 ih*
@@ -108,7 +108,7 @@ RUN
 NAME=iZ*
 FILE=../bins/elf/analysis/x86-helloworld-gcc
 EXPECT=<<EOF
-f bin_size @ 4899
+"f bin_size @ 4899"
 EOF
 CMDS=<<EOF
 iZ*
@@ -151,26 +151,26 @@ va       false
 Num  Vaddr       Bind      Type Name
 [Exports]
 Num Paddr      Vaddr      Bind     Type Size Name
-e cfg.bigendian=false
-e asm.bits=64
-e asm.dwarf=false
-e asm.pcalign=0
-fs imports
-fs symbols
-fs exports
+"e cfg.bigendian=false"
+"e asm.bits=64"
+"e asm.dwarf=false"
+"e asm.pcalign=0"
+"fs imports"
+"fs symbols"
+"fs exports"
 [Imports]
 Num  Vaddr       Bind      Type Name
-fs imports
+"fs imports"
 [Entrypoints]
 
 0 entrypoints
-fs symbols
+"fs symbols"
 [Symbols]
 Num Paddr      Vaddr      Bind     Type Size Name
-fs symbols
+"fs symbols"
 [Sections]
 Nm Paddr       Size Vaddr      Memsz Perms Name
-fs sections
+"fs sections"
 EOF
 ARGS=-a x86
 CMDS=<<EOF
@@ -202,10 +202,10 @@ format   any
 iorw     true
 blksz    0x0
 block    0x100
-e cfg.bigendian=false
-e asm.bits=64
-e asm.dwarf=false
-e asm.pcalign=0
+"e cfg.bigendian=false"
+"e asm.bits=64"
+"e asm.dwarf=false"
+"e asm.pcalign=0"
 baddr    0x0
 binsz    1024
 bits     64
@@ -226,10 +226,10 @@ sanitiz  false
 static   true
 stripped false
 va       false
-e cfg.bigendian=false
-e asm.bits=64
-e asm.dwarf=false
-e asm.pcalign=0
+"e cfg.bigendian=false"
+"e asm.bits=64"
+"e asm.dwarf=false"
+"e asm.pcalign=0"
 EOF
 ARGS=-a x86
 CMDS=<<EOF
@@ -930,7 +930,7 @@ RUN
 NAME=ic*
 FILE=../bins/elf/libmagic.so
 EXPECT=<<EOF
-fs classes
+"fs classes"
 "f class.JNIEnv = 0x6060"
 "f method._JNIEnv.FindClass(char_const*) = 0x6060"
 "f method._JNIEnv.DeleteLocalRef(_jobject*) = 0x606a"
@@ -2763,7 +2763,7 @@ RUN
 NAME=il* (file x86)
 FILE=../bins/elf/analysis/x86-helloworld-gcc
 EXPECT=<<EOF
-CCa entry0 libc.so.6
+"CCa entry0 libc.so.6"
 EOF
 CMDS=<<EOF
 il*
@@ -2789,15 +2789,15 @@ RUN
 NAME=ir* (file x86)
 FILE=../bins/elf/analysis/x86-helloworld-gcc
 EXPECT=<<EOF
-fs relocs
+"fs relocs"
 "f reloc.__gmon_start__ 4 0x08049690"
-Cd 4 @ 0x08049690
+"Cd 4 @ 0x08049690"
 "f reloc.puts 4 0x080496a0"
-Cd 4 @ 0x080496a0
+"Cd 4 @ 0x080496a0"
 "f reloc.__gmon_start__ 4 0x080496a4"
-Cd 4 @ 0x080496a4
+"Cd 4 @ 0x080496a4"
 "f reloc.__libc_start_main 4 0x080496a8"
-Cd 4 @ 0x080496a8
+"Cd 4 @ 0x080496a8"
 EOF
 CMDS=<<EOF
 ir*
@@ -3323,8 +3323,8 @@ RUN
 NAME=izzz* (file x86_64)
 FILE=../bins/elf/analysis/hello-linux-x86_64
 EXPECT=<<EOF
-f str.8 10 @ 0x00000034
-Cs 10 @ 0x00000034
+"f str.8 10 @ 0x00000034"
+"Cs 10 @ 0x00000034"
 EOF
 CMDS=<<EOF
 izzz*~:0
@@ -3390,8 +3390,8 @@ RUN
 NAME=iM* command
 FILE=../bins/elf/redpill
 EXPECT=<<EOF
-fs symbols
-f main @ 0x0000142e
+"fs symbols"
+"f main @ 0x0000142e"
 EOF
 CMDS=<<EOF
 iM*
@@ -3672,7 +3672,7 @@ FILE=../bins/elf/before-after-main
 CMDS=<<EXPECT
 iee*
 EXPECT=<<RUN
-fs symbols
+"fs symbols"
 "f entry.preinit0 1 0x08048486"
 "f entry.preinit0_hpaddr 1 0x00000ed4"
 "s entry.preinit0"
@@ -4099,20 +4099,20 @@ RUN
 NAME=iR*
 FILE=../bins/pe/standard.exe
 CMDS=iR*
-EXPECT='fs resources
-f resource.0 5672 0x00401180
-f resource.1 76 0x00402a10
-f resource.2 20 0x004027b0
-f resource.3 452 0x004027d0
-f resource.4 74 0x004029a0
-fs *'
+EXPECT='"fs resources"
+"f resource.0 5672 0x00401180"
+"f resource.1 76 0x00402a10"
+"f resource.2 20 0x004027b0"
+"f resource.3 452 0x004027d0"
+"f resource.4 74 0x004029a0"
+"fs *"'
 RUN
 
 NAME=izzz*
 FILE=../bins/mach0/fatmach0-3true
 CMDS=izzz*~str.http:__www.apple.com_appleca_codesigning.crl0
 EXPECT=<<RUN
-f str.http:__www.apple.com_appleca_codesigning.crl0 48 @ 0x00002f3c
+"f str.http:__www.apple.com_appleca_codesigning.crl0 48 @ 0x00002f3c"
 RUN
 
 NAME=it

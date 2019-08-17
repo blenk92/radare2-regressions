@@ -2,7 +2,7 @@ NAME=ELF: arm relocs
 FILE=../bins/elf/analysis/arm-relocs
 EXPECT=<<EOF
 11
-fs relocs
+"fs relocs"
 "f reloc.r0 4 0x08000034"
 "f reloc.r2 4 0x0800003c"
 "f reloc.r3 4 0x08000040"

@@ -31,8 +31,8 @@ RUN
 NAME=MZ: unzip.exe segments
 FILE=../bins/mz/unzip.exe
 EXPECT=<<EOF
-fs sections
-f section.seg_000 = 0x00000000
+"fs sections"
+"f section.seg_000 = 0x00000000"
 EOF
 CMDS=<<EOF
 iS*
